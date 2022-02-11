@@ -1,7 +1,16 @@
 import SwiftUI
 
 struct ThoughtsView: View {
+
+    @State var selectedDay: WeekDays?
+    
     var body: some View {
-        Text("Thoughts view")
+        VStack {
+            WeekCalendarView(selectedDay: $selectedDay)
+
+            Spacer()
+        }
+        .padding(.horizontal, 20)
+        .navigationBarHidden(true)
     }
 }

@@ -13,4 +13,6 @@ extension Color {
     static let stateBlue = Color("stateBlue")
 
     static let violet = Color("violet")
+
+    static let darkPurple = Color("darkPurple")
 }

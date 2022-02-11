@@ -40,6 +40,10 @@
 		84704DF427B4721B0053F7DE /* ExampleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84704DF327B4721B0053F7DE /* ExampleManager.swift */; };
 		84704DF727B4730E0053F7DE /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84704DF627B4730E0053F7DE /* BaseManager.swift */; };
 		84704DF927B477330053F7DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84704DF827B477330053F7DE /* GoogleService-Info.plist */; };
+		84704E1027B6ECEE0053F7DE /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84704E0F27B6ECEC0053F7DE /* CalendarManager.swift */; };
+		84704E1227B6EDB50053F7DE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84704E1127B6EDB50053F7DE /* Date.swift */; };
+		8474EC2B27B71DCE00603AB6 /* WeekCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474EC2A27B71DCE00603AB6 /* WeekCalendarView.swift */; };
+		8474EC2E27B71EB400603AB6 /* WeekDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474EC2D27B71EB400603AB6 /* WeekDays.swift */; };
 		CD4C283AFECAB36ACC4DE0A6 /* Pods_Mindever.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0503AF125EB1D07B62A9E0 /* Pods_Mindever.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +85,10 @@
 		84704DF327B4721B0053F7DE /* ExampleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleManager.swift; sourceTree = "<group>"; };
 		84704DF627B4730E0053F7DE /* BaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseManager.swift; sourceTree = "<group>"; };
 		84704DF827B477330053F7DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84704E0F27B6ECEC0053F7DE /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
+		84704E1127B6EDB50053F7DE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		8474EC2A27B71DCE00603AB6 /* WeekCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCalendarView.swift; sourceTree = "<group>"; };
+		8474EC2D27B71EB400603AB6 /* WeekDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDays.swift; sourceTree = "<group>"; };
 		B9798BF29AB05B0D232CDC7D /* Pods-Mindever.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindever.release.xcconfig"; path = "Target Support Files/Pods-Mindever/Pods-Mindever.release.xcconfig"; sourceTree = "<group>"; };
 		D2F5D682356A1A286F746F71 /* Pods-Mindever.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindever.debug.xcconfig"; path = "Target Support Files/Pods-Mindever/Pods-Mindever.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -269,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				84704D9727B306710053F7DE /* String.swift */,
+				84704E1127B6EDB50053F7DE /* Date.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -277,6 +286,8 @@
 			isa = PBXGroup;
 			children = (
 				84704DD427B40E9B0053F7DE /* Firestore */,
+				84704E0E27B6ECCA0053F7DE /* Managers */,
+				8474EC2C27B71DD200603AB6 /* Views */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -306,6 +317,31 @@
 				84704DF327B4721B0053F7DE /* ExampleManager.swift */,
 			);
 			path = "Data Managers";
+			sourceTree = "<group>";
+		};
+		84704E0E27B6ECCA0053F7DE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				84704E0F27B6ECEC0053F7DE /* CalendarManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8474EC2C27B71DD200603AB6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8474EC3027B71FFD00603AB6 /* Week Calendar */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8474EC3027B71FFD00603AB6 /* Week Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				8474EC2A27B71DCE00603AB6 /* WeekCalendarView.swift */,
+				8474EC2D27B71EB400603AB6 /* WeekDays.swift */,
+			);
+			path = "Week Calendar";
 			sourceTree = "<group>";
 		};
 		876F07A862FD531AC7DD588A /* Pods */ = {
@@ -447,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8442415B27B0025800237822 /* LoadingRectangle.swift in Sources */,
+				8474EC2E27B71EB400603AB6 /* WeekDays.swift in Sources */,
 				84704D7E27B2FD470053F7DE /* SettingsView.swift in Sources */,
 				84704DD627B411280053F7DE /* TutorialModel.swift in Sources */,
 				8442415627AFDE6900237822 /* RoundedCorner.swift in Sources */,
@@ -468,9 +505,12 @@
 				84704D9827B306710053F7DE /* String.swift in Sources */,
 				84704D8527B3032A0053F7DE /* BeliefsView.swift in Sources */,
 				84704DF727B4730E0053F7DE /* BaseManager.swift in Sources */,
+				8474EC2B27B71DCE00603AB6 /* WeekCalendarView.swift in Sources */,
 				8442412627AEFAD200237822 /* SceneDelegate.swift in Sources */,
 				84704DF427B4721B0053F7DE /* ExampleManager.swift in Sources */,
 				84704DA327B319150053F7DE /* MainViewModel.swift in Sources */,
+				84704E1227B6EDB50053F7DE /* Date.swift in Sources */,
+				84704E1027B6ECEE0053F7DE /* CalendarManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
