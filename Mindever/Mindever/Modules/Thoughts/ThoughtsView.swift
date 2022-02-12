@@ -3,14 +3,24 @@ import SwiftUI
 struct ThoughtsView: View {
 
     @State var selectedDay: WeekDays?
+
+    @State var isPickingDate: Bool = false
+    @State var pickedDate = Date()
     
     var body: some View {
         VStack {
-            WeekCalendarView(selectedDay: $selectedDay)
+            MainNavigationView(title: Localize.Tab.thoughts.text,
+                               showDatePicker: $isPickingDate
+            )
 
-            Spacer()
+            VStack {
+                WeekCalendarView(selectedDay: $selectedDay, pickedDate: $pickedDate)
+
+                Spacer()
+            }
+            .padding(.horizontal, 20)
         }
-        .padding(.horizontal, 20)
         .navigationBarHidden(true)
+        .navigationTitle("")
     }
 }

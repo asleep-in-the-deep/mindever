@@ -7,6 +7,7 @@ struct SettingsView: View {
             Text("Settings view")
         }
         .navigationBarHidden(true)
+        .navigationTitle("")
     }
 }
 

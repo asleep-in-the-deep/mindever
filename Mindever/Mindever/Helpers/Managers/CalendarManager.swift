@@ -25,7 +25,7 @@ final class CalendarManager {
                     self.dateFormatter.dateFormat = "d"
                     let dateString = dateFormatter.string(from: day)
 
-                    self.dateFormatter.dateFormat = "MMMM yyyy"
+                    self.dateFormatter.dateFormat = "LLLL yyyy"
                     let monthAndYear = dateFormatter.string(from: day)
 
                     week.append(WeekDays(dayOfWeek: dayOfWeek, day: dateString, monthAndYear: monthAndYear, date: day, hasRecords: false))
@@ -37,11 +37,11 @@ final class CalendarManager {
     }
 
     func checkIsToday(date: Date) -> Bool {
-        if calendar.isDateInToday(date) {
-            return true
-        } else {
-            return false
-        }
+        return calendar.isDateInToday(date)
+    }
+
+    func checkDayIsSameAs(pickedDate: Date, date: Date) -> Bool {
+        return calendar.isDate(pickedDate, inSameDayAs: date)
     }
 
 }

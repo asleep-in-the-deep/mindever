@@ -2,3 +2,8 @@
 "tab_thoughts" = "Мысли";
 "tab_beliefs" = "Убеждения";
 "tab_settings" = "Настройки";
+
+"navigation_charts" = "Показать графики";
+"navigation_doc" = "Скачать статистику";
+"navigation_date" = "Выберите дату";
+"navigation_selectDay" = "Выберите день для просмотра";

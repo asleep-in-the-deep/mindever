@@ -2,3 +2,8 @@
 "tab_thoughts" = "Thoughts";
 "tab_beliefs" = "Beliefs";
 "tab_settings" = "Settings";
+
+"navigation_charts" = "Show charts";
+"navigation_doc" = "Download statistics";
+"navigation_date" = "Select a date";
+"navigation_selectDay" = "Сhoose a day to view";

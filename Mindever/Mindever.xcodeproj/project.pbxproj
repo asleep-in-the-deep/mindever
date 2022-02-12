@@ -44,6 +44,9 @@
 		84704E1227B6EDB50053F7DE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84704E1127B6EDB50053F7DE /* Date.swift */; };
 		8474EC2B27B71DCE00603AB6 /* WeekCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474EC2A27B71DCE00603AB6 /* WeekCalendarView.swift */; };
 		8474EC2E27B71EB400603AB6 /* WeekDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474EC2D27B71EB400603AB6 /* WeekDays.swift */; };
+		849FB21027B8430900B981D7 /* MainNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FB20F27B8430900B981D7 /* MainNavigationView.swift */; };
+		849FB21427B86B9700B981D7 /* NavigationLocalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FB21327B86B9700B981D7 /* NavigationLocalize.swift */; };
+		849FB21627B8722D00B981D7 /* SelectDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FB21527B8722D00B981D7 /* SelectDatePicker.swift */; };
 		CD4C283AFECAB36ACC4DE0A6 /* Pods_Mindever.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0503AF125EB1D07B62A9E0 /* Pods_Mindever.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +92,9 @@
 		84704E1127B6EDB50053F7DE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		8474EC2A27B71DCE00603AB6 /* WeekCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCalendarView.swift; sourceTree = "<group>"; };
 		8474EC2D27B71EB400603AB6 /* WeekDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDays.swift; sourceTree = "<group>"; };
+		849FB20F27B8430900B981D7 /* MainNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationView.swift; sourceTree = "<group>"; };
+		849FB21327B86B9700B981D7 /* NavigationLocalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLocalize.swift; sourceTree = "<group>"; };
+		849FB21527B8722D00B981D7 /* SelectDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDatePicker.swift; sourceTree = "<group>"; };
 		B9798BF29AB05B0D232CDC7D /* Pods-Mindever.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindever.release.xcconfig"; path = "Target Support Files/Pods-Mindever/Pods-Mindever.release.xcconfig"; sourceTree = "<group>"; };
 		D2F5D682356A1A286F746F71 /* Pods-Mindever.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindever.debug.xcconfig"; path = "Target Support Files/Pods-Mindever/Pods-Mindever.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -269,6 +275,7 @@
 				84704D9227B306010053F7DE /* Localizable.strings */,
 				84704D9527B306330053F7DE /* Localize.swift */,
 				84704D9A27B307420053F7DE /* TabLocalize.swift */,
+				849FB21327B86B9700B981D7 /* NavigationLocalize.swift */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -331,6 +338,8 @@
 			isa = PBXGroup;
 			children = (
 				8474EC3027B71FFD00603AB6 /* Week Calendar */,
+				849FB20F27B8430900B981D7 /* MainNavigationView.swift */,
+				849FB21527B8722D00B981D7 /* SelectDatePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -495,6 +504,7 @@
 				8442413F27AEFD0E00237822 /* AuthView.swift in Sources */,
 				84704D9F27B30F1B0053F7DE /* TabItemData.swift in Sources */,
 				8442414D27AF05EE00237822 /* Color.swift in Sources */,
+				849FB21627B8722D00B981D7 /* SelectDatePicker.swift in Sources */,
 				84704DF127B46BA40053F7DE /* Document.swift in Sources */,
 				84704D8227B301AC0053F7DE /* ThoughtsView.swift in Sources */,
 				84704D7C27B2FD2B0053F7DE /* MoodView.swift in Sources */,
@@ -504,11 +514,13 @@
 				8442414127AEFD3100237822 /* MainView.swift in Sources */,
 				84704D9827B306710053F7DE /* String.swift in Sources */,
 				84704D8527B3032A0053F7DE /* BeliefsView.swift in Sources */,
+				849FB21427B86B9700B981D7 /* NavigationLocalize.swift in Sources */,
 				84704DF727B4730E0053F7DE /* BaseManager.swift in Sources */,
 				8474EC2B27B71DCE00603AB6 /* WeekCalendarView.swift in Sources */,
 				8442412627AEFAD200237822 /* SceneDelegate.swift in Sources */,
 				84704DF427B4721B0053F7DE /* ExampleManager.swift in Sources */,
 				84704DA327B319150053F7DE /* MainViewModel.swift in Sources */,
+				849FB21027B8430900B981D7 /* MainNavigationView.swift in Sources */,
 				84704E1227B6EDB50053F7DE /* Date.swift in Sources */,
 				84704E1027B6ECEE0053F7DE /* CalendarManager.swift in Sources */,
 			);

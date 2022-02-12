@@ -7,6 +7,7 @@ struct WeekCalendarView: View {
     @State var monthYearTitle: String = ""
 
     @Binding var selectedDay: WeekDays?
+    @Binding var pickedDate: Date
 
     var body: some View {
         VStack {
@@ -19,8 +20,8 @@ struct WeekCalendarView: View {
                         .foregroundColor(.violet)
                 }
 
-                Text(monthYearTitle)
-                    .font(.november(weight: .bold(size: 20)))
+                Text(monthYearTitle.capitalizeInSentence())
+                    .font(.november(weight: .medium(size: 16)))
                     .frame(maxWidth: .infinity)
 
                 Button {
@@ -63,9 +64,13 @@ struct WeekCalendarView: View {
                 }
             }
         }
+        .padding(.vertical, 20)
         .onAppear {
             self.setWeek()
         }
+        .onChange(of: pickedDate, perform: { _ in
+            self.setPickedDate()
+        })
     }
 
     private func setWeek(byAdding value: Int = 0, for date: Date = Date()) {
@@ -79,6 +84,15 @@ struct WeekCalendarView: View {
         for (index, day) in days.enumerated() {
             if CalendarManager.shared.checkIsToday(date: day.date) {
                 days[index].hasRecords = true
+                self.selectedDay = days[index]
+            }
+        }
+    }
+
+    private func setPickedDate() {
+        self.setWeek(byAdding: 0, for: pickedDate)
+        for (index, day) in days.enumerated() {
+            if CalendarManager.shared.checkDayIsSameAs(pickedDate: pickedDate, date: day.date) {
                 self.selectedDay = days[index]
             }
         }
