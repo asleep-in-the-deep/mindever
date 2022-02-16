@@ -2,11 +2,11 @@ import SwiftUI
 
 struct WeekCalendarView: View {
 
-    @State var days: [WeekDays] = []
+    @State var days: [WeekDay] = []
 
     @State var monthYearTitle: String = ""
 
-    @Binding var selectedDay: WeekDays?
+    @Binding var selectedDay: WeekDay?
     @Binding var pickedDate: Date
 
     var body: some View {
@@ -38,24 +38,24 @@ struct WeekCalendarView: View {
                     VStack(alignment: .center, spacing: 5) {
                         Text(day.dayOfWeek)
                             .font(.november(weight: .regular(size: 12)))
-                            .foregroundColor(.white)
+                            .foregroundColor(setColor(for: day))
 
                         Text(day.day)
                             .font(.november(weight: .medium(size: 14)))
-                            .foregroundColor(.white)
+                            .foregroundColor(setColor(for: day))
 
                         Circle()
                             .frame(width: 5, height: 5)
-                            .foregroundColor(day.hasRecords ? .white : .clear)
+                            .foregroundColor(day.hasRecords ? .aquamarine : .clear)
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.all, 10)
-                    .background(LinearGradient(colors: [.violet, .stateBlue], startPoint: .top, endPoint: .bottom))
+                    .background(day == selectedDay ? Color.violet : Color.clear)
                     .cornerRadius(10)
                     .overlay {
-                        if day == selectedDay {
+                        if day != selectedDay {
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.darkPurple, lineWidth: 5)
+                                .stroke(Color.border, lineWidth: 1)
                         }
                     }
                     .onTapGesture {
@@ -63,6 +63,9 @@ struct WeekCalendarView: View {
                     }
                 }
             }
+            .padding(.bottom, 20)
+
+            Divider()
         }
         .padding(.vertical, 20)
         .onAppear {
@@ -96,5 +99,9 @@ struct WeekCalendarView: View {
                 self.selectedDay = days[index]
             }
         }
+    }
+
+    private func setColor(for day: WeekDay) -> Color {
+        return day == selectedDay ? Color.white : Color.black
     }
 }

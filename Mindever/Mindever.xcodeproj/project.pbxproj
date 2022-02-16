@@ -43,10 +43,12 @@
 		84704E1027B6ECEE0053F7DE /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84704E0F27B6ECEC0053F7DE /* CalendarManager.swift */; };
 		84704E1227B6EDB50053F7DE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84704E1127B6EDB50053F7DE /* Date.swift */; };
 		8474EC2B27B71DCE00603AB6 /* WeekCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474EC2A27B71DCE00603AB6 /* WeekCalendarView.swift */; };
-		8474EC2E27B71EB400603AB6 /* WeekDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474EC2D27B71EB400603AB6 /* WeekDays.swift */; };
+		8474EC2E27B71EB400603AB6 /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474EC2D27B71EB400603AB6 /* WeekDay.swift */; };
 		849FB21027B8430900B981D7 /* MainNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FB20F27B8430900B981D7 /* MainNavigationView.swift */; };
 		849FB21427B86B9700B981D7 /* NavigationLocalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FB21327B86B9700B981D7 /* NavigationLocalize.swift */; };
 		849FB21627B8722D00B981D7 /* SelectDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FB21527B8722D00B981D7 /* SelectDatePicker.swift */; };
+		84AA69A527BDA449004A1978 /* MoodLocalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69A427BDA449004A1978 /* MoodLocalize.swift */; };
+		84AA69A727BDA82E004A1978 /* ActionLocalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69A627BDA82D004A1978 /* ActionLocalize.swift */; };
 		CD4C283AFECAB36ACC4DE0A6 /* Pods_Mindever.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0503AF125EB1D07B62A9E0 /* Pods_Mindever.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,10 +93,12 @@
 		84704E0F27B6ECEC0053F7DE /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 		84704E1127B6EDB50053F7DE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		8474EC2A27B71DCE00603AB6 /* WeekCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCalendarView.swift; sourceTree = "<group>"; };
-		8474EC2D27B71EB400603AB6 /* WeekDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDays.swift; sourceTree = "<group>"; };
+		8474EC2D27B71EB400603AB6 /* WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDay.swift; sourceTree = "<group>"; };
 		849FB20F27B8430900B981D7 /* MainNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationView.swift; sourceTree = "<group>"; };
 		849FB21327B86B9700B981D7 /* NavigationLocalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLocalize.swift; sourceTree = "<group>"; };
 		849FB21527B8722D00B981D7 /* SelectDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDatePicker.swift; sourceTree = "<group>"; };
+		84AA69A427BDA449004A1978 /* MoodLocalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLocalize.swift; sourceTree = "<group>"; };
+		84AA69A627BDA82D004A1978 /* ActionLocalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionLocalize.swift; sourceTree = "<group>"; };
 		B9798BF29AB05B0D232CDC7D /* Pods-Mindever.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindever.release.xcconfig"; path = "Target Support Files/Pods-Mindever/Pods-Mindever.release.xcconfig"; sourceTree = "<group>"; };
 		D2F5D682356A1A286F746F71 /* Pods-Mindever.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindever.debug.xcconfig"; path = "Target Support Files/Pods-Mindever/Pods-Mindever.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -276,6 +280,8 @@
 				84704D9527B306330053F7DE /* Localize.swift */,
 				84704D9A27B307420053F7DE /* TabLocalize.swift */,
 				849FB21327B86B9700B981D7 /* NavigationLocalize.swift */,
+				84AA69A427BDA449004A1978 /* MoodLocalize.swift */,
+				84AA69A627BDA82D004A1978 /* ActionLocalize.swift */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -348,7 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				8474EC2A27B71DCE00603AB6 /* WeekCalendarView.swift */,
-				8474EC2D27B71EB400603AB6 /* WeekDays.swift */,
+				8474EC2D27B71EB400603AB6 /* WeekDay.swift */,
 			);
 			path = "Week Calendar";
 			sourceTree = "<group>";
@@ -492,8 +498,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8442415B27B0025800237822 /* LoadingRectangle.swift in Sources */,
-				8474EC2E27B71EB400603AB6 /* WeekDays.swift in Sources */,
+				8474EC2E27B71EB400603AB6 /* WeekDay.swift in Sources */,
 				84704D7E27B2FD470053F7DE /* SettingsView.swift in Sources */,
+				84AA69A527BDA449004A1978 /* MoodLocalize.swift in Sources */,
 				84704DD627B411280053F7DE /* TutorialModel.swift in Sources */,
 				8442415627AFDE6900237822 /* RoundedCorner.swift in Sources */,
 				8442412427AEFAD200237822 /* AppDelegate.swift in Sources */,
@@ -518,6 +525,7 @@
 				84704DF727B4730E0053F7DE /* BaseManager.swift in Sources */,
 				8474EC2B27B71DCE00603AB6 /* WeekCalendarView.swift in Sources */,
 				8442412627AEFAD200237822 /* SceneDelegate.swift in Sources */,
+				84AA69A727BDA82E004A1978 /* ActionLocalize.swift in Sources */,
 				84704DF427B4721B0053F7DE /* ExampleManager.swift in Sources */,
 				84704DA327B319150053F7DE /* MainViewModel.swift in Sources */,
 				849FB21027B8430900B981D7 /* MainNavigationView.swift in Sources */,

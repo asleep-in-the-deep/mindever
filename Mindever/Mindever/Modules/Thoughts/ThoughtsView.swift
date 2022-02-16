@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ThoughtsView: View {
 
-    @State var selectedDay: WeekDays?
+    @State var selectedDay: WeekDay?
 
     @State var isPickingDate: Bool = false
     @State var pickedDate = Date()

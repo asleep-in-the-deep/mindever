@@ -1,6 +1,6 @@
 import Foundation
 
-struct WeekDays: Hashable {
+struct WeekDay: Hashable {
     let dayOfWeek: String
     let day: String
     let monthAndYear: String

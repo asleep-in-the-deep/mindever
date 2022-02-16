@@ -7,3 +7,22 @@
 "navigation_doc" = "Скачать статистику";
 "navigation_date" = "Выберите дату";
 "navigation_selectDay" = "Выберите день для просмотра";
+
+"mood_sleep" = "Сон";
+"mood_sleepDuration" = "Длительность";
+"mood_sleepQuality" = "Качество";
+
+"mood_anxiety" = "Тревога";
+"mood_annoyance" = "Раздражение";
+"mood_energy" = "Энергия";
+"mood_selfEsteem" = "Самооценка";
+
+"mood_excited" = "Отличное";
+"mood_happy" = "Хорошее";
+"mood_normal" = "Среднее";
+"mood_sad" = "Плохое";
+"mood_depressed" = "Ужасное";
+
+"action_open" = "Открыть";
+"action_edit" = "Изменить";
+"action_delete" = "Удалить";

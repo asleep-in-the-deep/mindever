@@ -7,3 +7,22 @@
 "navigation_doc" = "Download statistics";
 "navigation_date" = "Select a date";
 "navigation_selectDay" = "Сhoose a day to view";
+
+"mood_sleep" = "Sleep";
+"mood_sleepDuration" = "Duration";
+"mood_sleepQuality" = "Quality";
+
+"mood_anxiety" = "Anxiety";
+"mood_annoyance" = "Annoyance";
+"mood_energy" = "Energy";
+"mood_selfEsteem" = "Self-esteem";
+
+"mood_excited" = "Excited";
+"mood_happy" = "Happy";
+"mood_normal" = "Normal";
+"mood_sad" = "Sad";
+"mood_depressed" = "Awful";
+
+"action_open" = "Open";
+"action_edit" = "Edit";
+"action_delete" = "Delete";
