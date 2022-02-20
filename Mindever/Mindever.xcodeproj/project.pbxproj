@@ -46,9 +46,15 @@
 		8474EC2E27B71EB400603AB6 /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474EC2D27B71EB400603AB6 /* WeekDay.swift */; };
 		849FB21027B8430900B981D7 /* MainNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FB20F27B8430900B981D7 /* MainNavigationView.swift */; };
 		849FB21427B86B9700B981D7 /* NavigationLocalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FB21327B86B9700B981D7 /* NavigationLocalize.swift */; };
-		849FB21627B8722D00B981D7 /* SelectDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FB21527B8722D00B981D7 /* SelectDatePicker.swift */; };
+		849FB21627B8722D00B981D7 /* DayCalendarPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FB21527B8722D00B981D7 /* DayCalendarPicker.swift */; };
 		84AA69A527BDA449004A1978 /* MoodLocalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69A427BDA449004A1978 /* MoodLocalize.swift */; };
 		84AA69A727BDA82E004A1978 /* ActionLocalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69A627BDA82D004A1978 /* ActionLocalize.swift */; };
+		84AA69BD27BFFD57004A1978 /* NewMoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69BC27BFFD57004A1978 /* NewMoodView.swift */; };
+		84AA69C027BFFDCB004A1978 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 84AA69BF27BFFDCB004A1978 /* SwiftUIX */; };
+		84AA69C227C19224004A1978 /* RecordNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69C127C19224004A1978 /* RecordNavigationView.swift */; };
+		84AA69C527C19D68004A1978 /* RecordDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69C427C19D68004A1978 /* RecordDatePickerView.swift */; };
+		84AA69C727C1B2D3004A1978 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69C627C1B2D3004A1978 /* Image.swift */; };
+		84AA69C927C1B36A004A1978 /* MoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69C827C1B36A004A1978 /* MoodModel.swift */; };
 		CD4C283AFECAB36ACC4DE0A6 /* Pods_Mindever.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0503AF125EB1D07B62A9E0 /* Pods_Mindever.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,9 +102,14 @@
 		8474EC2D27B71EB400603AB6 /* WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDay.swift; sourceTree = "<group>"; };
 		849FB20F27B8430900B981D7 /* MainNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationView.swift; sourceTree = "<group>"; };
 		849FB21327B86B9700B981D7 /* NavigationLocalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLocalize.swift; sourceTree = "<group>"; };
-		849FB21527B8722D00B981D7 /* SelectDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDatePicker.swift; sourceTree = "<group>"; };
+		849FB21527B8722D00B981D7 /* DayCalendarPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCalendarPicker.swift; sourceTree = "<group>"; };
 		84AA69A427BDA449004A1978 /* MoodLocalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLocalize.swift; sourceTree = "<group>"; };
 		84AA69A627BDA82D004A1978 /* ActionLocalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionLocalize.swift; sourceTree = "<group>"; };
+		84AA69BC27BFFD57004A1978 /* NewMoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMoodView.swift; sourceTree = "<group>"; };
+		84AA69C127C19224004A1978 /* RecordNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordNavigationView.swift; sourceTree = "<group>"; };
+		84AA69C427C19D68004A1978 /* RecordDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDatePickerView.swift; sourceTree = "<group>"; };
+		84AA69C627C1B2D3004A1978 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		84AA69C827C1B36A004A1978 /* MoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodModel.swift; sourceTree = "<group>"; };
 		B9798BF29AB05B0D232CDC7D /* Pods-Mindever.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindever.release.xcconfig"; path = "Target Support Files/Pods-Mindever/Pods-Mindever.release.xcconfig"; sourceTree = "<group>"; };
 		D2F5D682356A1A286F746F71 /* Pods-Mindever.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindever.debug.xcconfig"; path = "Target Support Files/Pods-Mindever/Pods-Mindever.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD4C283AFECAB36ACC4DE0A6 /* Pods_Mindever.framework in Frameworks */,
+				84AA69C027BFFDCB004A1978 /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +238,7 @@
 				8442414A27AF03A300237822 /* Font.swift */,
 				8442414C27AF05EE00237822 /* Color.swift */,
 				8442415527AFDE6800237822 /* RoundedCorner.swift */,
+				84AA69C627C1B2D3004A1978 /* Image.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -253,6 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				84704D7B27B2FD2B0053F7DE /* MoodView.swift */,
+				84AA69C827C1B36A004A1978 /* MoodModel.swift */,
+				84AA69C327C1980C004A1978 /* New Mood */,
 			);
 			path = Mood;
 			sourceTree = "<group>";
@@ -345,7 +360,9 @@
 			children = (
 				8474EC3027B71FFD00603AB6 /* Week Calendar */,
 				849FB20F27B8430900B981D7 /* MainNavigationView.swift */,
-				849FB21527B8722D00B981D7 /* SelectDatePicker.swift */,
+				84AA69C127C19224004A1978 /* RecordNavigationView.swift */,
+				849FB21527B8722D00B981D7 /* DayCalendarPicker.swift */,
+				84AA69C427C19D68004A1978 /* RecordDatePickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -357,6 +374,14 @@
 				8474EC2D27B71EB400603AB6 /* WeekDay.swift */,
 			);
 			path = "Week Calendar";
+			sourceTree = "<group>";
+		};
+		84AA69C327C1980C004A1978 /* New Mood */ = {
+			isa = PBXGroup;
+			children = (
+				84AA69BC27BFFD57004A1978 /* NewMoodView.swift */,
+			);
+			path = "New Mood";
 			sourceTree = "<group>";
 		};
 		876F07A862FD531AC7DD588A /* Pods */ = {
@@ -394,6 +419,9 @@
 			dependencies = (
 			);
 			name = Mindever;
+			packageProductDependencies = (
+				84AA69BF27BFFDCB004A1978 /* SwiftUIX */,
+			);
 			productName = Mindever;
 			productReference = 8442412027AEFAD200237822 /* Mindever.app */;
 			productType = "com.apple.product-type.application";
@@ -423,6 +451,9 @@
 				ru,
 			);
 			mainGroup = 8442411727AEFAD100237822;
+			packageReferences = (
+				84AA69BE27BFFDCB004A1978 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = 8442412127AEFAD200237822 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -502,6 +533,7 @@
 				84704D7E27B2FD470053F7DE /* SettingsView.swift in Sources */,
 				84AA69A527BDA449004A1978 /* MoodLocalize.swift in Sources */,
 				84704DD627B411280053F7DE /* TutorialModel.swift in Sources */,
+				84AA69BD27BFFD57004A1978 /* NewMoodView.swift in Sources */,
 				8442415627AFDE6900237822 /* RoundedCorner.swift in Sources */,
 				8442412427AEFAD200237822 /* AppDelegate.swift in Sources */,
 				84704D9B27B307420053F7DE /* TabLocalize.swift in Sources */,
@@ -509,9 +541,11 @@
 				84704DEF27B469E20053F7DE /* Collection.swift in Sources */,
 				8442415D27B009A100237822 /* TutorialTimer.swift in Sources */,
 				8442413F27AEFD0E00237822 /* AuthView.swift in Sources */,
+				84AA69C727C1B2D3004A1978 /* Image.swift in Sources */,
 				84704D9F27B30F1B0053F7DE /* TabItemData.swift in Sources */,
 				8442414D27AF05EE00237822 /* Color.swift in Sources */,
-				849FB21627B8722D00B981D7 /* SelectDatePicker.swift in Sources */,
+				84AA69C227C19224004A1978 /* RecordNavigationView.swift in Sources */,
+				849FB21627B8722D00B981D7 /* DayCalendarPicker.swift in Sources */,
 				84704DF127B46BA40053F7DE /* Document.swift in Sources */,
 				84704D8227B301AC0053F7DE /* ThoughtsView.swift in Sources */,
 				84704D7C27B2FD2B0053F7DE /* MoodView.swift in Sources */,
@@ -519,6 +553,7 @@
 				8442414B27AF03A300237822 /* Font.swift in Sources */,
 				8442414327AEFEAF00237822 /* SingInButton.swift in Sources */,
 				8442414127AEFD3100237822 /* MainView.swift in Sources */,
+				84AA69C527C19D68004A1978 /* RecordDatePickerView.swift in Sources */,
 				84704D9827B306710053F7DE /* String.swift in Sources */,
 				84704D8527B3032A0053F7DE /* BeliefsView.swift in Sources */,
 				849FB21427B86B9700B981D7 /* NavigationLocalize.swift in Sources */,
@@ -526,6 +561,7 @@
 				8474EC2B27B71DCE00603AB6 /* WeekCalendarView.swift in Sources */,
 				8442412627AEFAD200237822 /* SceneDelegate.swift in Sources */,
 				84AA69A727BDA82E004A1978 /* ActionLocalize.swift in Sources */,
+				84AA69C927C1B36A004A1978 /* MoodModel.swift in Sources */,
 				84704DF427B4721B0053F7DE /* ExampleManager.swift in Sources */,
 				84704DA327B319150053F7DE /* MainViewModel.swift in Sources */,
 				849FB21027B8430900B981D7 /* MainNavigationView.swift in Sources */,
@@ -755,6 +791,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84AA69BE27BFFDCB004A1978 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84AA69BF27BFFDCB004A1978 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84AA69BE27BFFDCB004A1978 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8442411827AEFAD100237822 /* Project object */;
 }

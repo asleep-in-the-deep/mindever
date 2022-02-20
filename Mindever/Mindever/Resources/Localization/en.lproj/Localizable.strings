@@ -7,6 +7,9 @@
 "navigation_doc" = "Download statistics";
 "navigation_date" = "Select a date";
 "navigation_selectDay" = "Сhoose a day to view";
+"navigation_cancel" = "Cancel";
+"navigation_save" = "Save";
+"navigation_newRecord" = "New record";
 
 "mood_sleep" = "Sleep";
 "mood_sleepDuration" = "Duration";
@@ -17,12 +20,25 @@
 "mood_energy" = "Energy";
 "mood_selfEsteem" = "Self-esteem";
 
-"mood_excited" = "Excited";
-"mood_happy" = "Happy";
+"mood_depressed" = "Awful";
 "mood_normal" = "Normal";
 "mood_sad" = "Sad";
-"mood_depressed" = "Awful";
+"mood_happy" = "Happy";
+"mood_excited" = "Excited";
+
+"moodRecord_selectMood" = "What is your current mood?";
+"moodRecord_selectEnergy" = "What is your energy level now?";
+"moodRecord_selectSelfesteem" = "What level of self-esteem do you have now?";
+"moodRecord_selectAnxiety" = "What kind of anxiety do you have now?";
+"moodRecord_selectAnnoyance" = "What is your current annoyance?";
+"moodRecord_selectSleep" = "How long did you sleep today?";
+"moodRecord_selectQuality" = "How well did you sleep?";
 
 "action_open" = "Open";
 "action_edit" = "Edit";
 "action_delete" = "Delete";
+"action_exitTitle" = "Are you sure you want to get out?";
+"action_exit" = "Exit without saving";
+"action_saveTitle" = "Are you done with this record?";
+"action_save" = "Yes, save and exit";
+"action_cancel" = "Cancel";

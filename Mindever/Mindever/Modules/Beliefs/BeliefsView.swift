@@ -7,10 +7,13 @@ struct BeliefsView: View {
     @State var isPickingDate: Bool = false
     @State var pickedDate = Date()
 
+    @State var showNewBelief: Bool = false
+
     var body: some View {
         VStack {
             MainNavigationView(title: Localize.Tab.beliefs.text,
-                               showDatePicker: $isPickingDate
+                               showDatePicker: $isPickingDate,
+                               addNewRecord: $showNewBelief
             )
 
             VStack {

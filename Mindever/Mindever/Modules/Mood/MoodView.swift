@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftUIX
 
 struct MoodView: View {
 
@@ -7,10 +8,13 @@ struct MoodView: View {
     @State var isPickingDate: Bool = false
     @State var pickedDate = Date()
 
+    @State var showNewMood: Bool = false
+
     var body: some View {
         VStack {
             MainNavigationView(title: Localize.Tab.mood.text,
-                               showDatePicker: $isPickingDate
+                               showDatePicker: $isPickingDate,
+                               addNewRecord: $showNewMood
             )
 
             ScrollView {
@@ -33,9 +37,12 @@ struct MoodView: View {
         .disabled(isPickingDate)
         .overlay {
             if isPickingDate {
-                SelectDatePicker(isPicking: $isPickingDate, date: $pickedDate)
+                DayCalendarPicker(isPicking: $isPickingDate, date: $pickedDate)
                     .padding(.horizontal, 20)
             }
+        }
+        .navigate(isActive: $showNewMood) {
+            NewMoodView()
         }
     }
     
@@ -95,7 +102,7 @@ fileprivate struct MoodCellView: View {
                 Spacer()
             }
             .frame(height: 30)
-            .background(Color.normal
+            .background(Color.violet
                         .cornerRadius(10, corners: [.topLeft, .topRight])
             )
 

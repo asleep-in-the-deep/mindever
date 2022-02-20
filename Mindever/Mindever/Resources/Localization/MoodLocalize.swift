@@ -33,19 +33,41 @@ extension Localize {
     }
 
     enum Mood {
-        case excited
-        case happy
-        case normal
-        case sad
         case depressed
+        case sad
+        case normal
+        case happy
+        case excited
 
         var text: String {
             switch self {
-            case .excited: return "mood_excited".localize()
-            case .happy: return "mood_happy".localize()
-            case .normal: return "mood_normal".localize()
-            case .sad: return "mood_sad".localize()
             case .depressed: return "mood_depressed".localize()
+            case .sad: return "mood_sad".localize()
+            case .normal: return "mood_normal".localize()
+            case .happy: return "mood_happy".localize()
+            case .excited: return "mood_excited".localize()
+            }
+        }
+    }
+
+    enum MoodRecord {
+        case mood
+        case energy
+        case selfEsteem
+        case anxiety
+        case annoyance
+        case sleepDuration
+        case sleepQuality
+
+        var text: String {
+            switch self {
+            case .mood: return "moodRecord_selectMood".localize()
+            case .energy: return "moodRecord_selectEnergy".localize()
+            case .selfEsteem: return "moodRecord_selectSelfesteem".localize()
+            case .anxiety: return "moodRecord_selectAnxiety".localize()
+            case .annoyance: return "moodRecord_selectAnnoyance".localize()
+            case .sleepDuration: return "moodRecord_selectSleep".localize()
+            case .sleepQuality: return "moodRecord_selectQuality".localize()
             }
         }
     }

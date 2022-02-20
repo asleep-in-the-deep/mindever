@@ -50,7 +50,7 @@ struct WeekCalendarView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.all, 10)
-                    .background(day == selectedDay ? Color.violet : Color.clear)
+                    .background(setBackground(for: day))
                     .cornerRadius(10)
                     .overlay {
                         if day != selectedDay {
@@ -103,5 +103,9 @@ struct WeekCalendarView: View {
 
     private func setColor(for day: WeekDay) -> Color {
         return day == selectedDay ? Color.white : Color.black
+    }
+
+    private func setBackground(for day: WeekDay) -> Color {
+        return day == selectedDay ? Color.violet : Color.clear
     }
 }

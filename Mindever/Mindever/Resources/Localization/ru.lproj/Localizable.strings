@@ -7,6 +7,9 @@
 "navigation_doc" = "Скачать статистику";
 "navigation_date" = "Выберите дату";
 "navigation_selectDay" = "Выберите день для просмотра";
+"navigation_cancel" = "Отмена";
+"navigation_save" = "Сохранить";
+"navigation_newRecord" = "Новая запись";
 
 "mood_sleep" = "Сон";
 "mood_sleepDuration" = "Длительность";
@@ -17,12 +20,25 @@
 "mood_energy" = "Энергия";
 "mood_selfEsteem" = "Самооценка";
 
-"mood_excited" = "Отличное";
-"mood_happy" = "Хорошее";
-"mood_normal" = "Среднее";
-"mood_sad" = "Плохое";
 "mood_depressed" = "Ужасное";
+"mood_sad" = "Плохое";
+"mood_normal" = "Среднее";
+"mood_happy" = "Хорошее";
+"mood_excited" = "Отличное";
+
+"moodRecord_selectMood" = "Какое у тебя сейчас настроение?";
+"moodRecord_selectEnergy" = "Насколько энергично ты себя чувствуешь?";
+"moodRecord_selectSelfesteem" = "Какая у тебя сейчас самооценка?";
+"moodRecord_selectAnxiety" = "Насколько тревожно тебе сейчас?";
+"moodRecord_selectAnnoyance" = "Сколько раздражения ты сейчас чувствуешь?";
+"moodRecord_selectSleep" = "Сколько времени сегодня ушло на сон?";
+"moodRecord_selectQuality" = "Насколько хорошо спалось?";
 
 "action_open" = "Открыть";
 "action_edit" = "Изменить";
 "action_delete" = "Удалить";
+"action_exitTitle" = "Вы уверены, что хотите выйти?";
+"action_exit" = "Выйти без сохранения";
+"action_saveTitle" = "Вы закончили с этой записью?";
+"action_save" = "Да, сохранить и выйти";
+"action_cancel" = "Отменить";

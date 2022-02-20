@@ -6,11 +6,14 @@ struct ThoughtsView: View {
 
     @State var isPickingDate: Bool = false
     @State var pickedDate = Date()
+
+    @State var showNewThought: Bool = false
     
     var body: some View {
         VStack {
             MainNavigationView(title: Localize.Tab.thoughts.text,
-                               showDatePicker: $isPickingDate
+                               showDatePicker: $isPickingDate,
+                               addNewRecord: $showNewThought
             )
 
             VStack {

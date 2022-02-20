@@ -44,4 +44,13 @@ final class CalendarManager {
         return calendar.isDate(pickedDate, inSameDayAs: date)
     }
 
+    func getDefaultSleep() -> Date {
+        var components = DateComponents()
+        components.hour = 8
+        components.minute = 0
+        let date = calendar.date(from: components)
+
+        return date ?? Date.now
+    }
+
 }

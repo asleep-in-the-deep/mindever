@@ -30,8 +30,6 @@ extension Color {
 
     static let happy = Color("happy")
 
-    static let normal = Color("normal")
-
     static let sad = Color("sad")
 
     static let depressed = Color("depressed")

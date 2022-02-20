@@ -6,6 +6,8 @@ struct MainNavigationView: View {
 
     @Binding var showDatePicker: Bool
 
+    @Binding var addNewRecord: Bool
+
     var body: some View {
         HStack(spacing: 15) {
             MoreNavigationButton(imageName: "ellipsis")
@@ -22,7 +24,7 @@ struct MainNavigationView: View {
 
             NavigationButton(imageName: "calendar", setAction: $showDatePicker)
 
-            NavigationButton(imageName: "plus", setAction: $showDatePicker)
+            NavigationButton(imageName: "plus", setAction: $addNewRecord)
         }
         .frame(height: 50)
         .padding(.horizontal, 20)
