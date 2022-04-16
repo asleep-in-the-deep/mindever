@@ -11,6 +11,8 @@
 "navigation_save" = "Сохранить";
 "navigation_newRecord" = "Новая запись";
 
+"base_norecords" = "Нет записей";
+
 "mood_sleep" = "Сон";
 "mood_sleepDuration" = "Длительность";
 "mood_sleepQuality" = "Качество";

@@ -11,6 +11,8 @@
 "navigation_save" = "Save";
 "navigation_newRecord" = "New record";
 
+"base_norecords" = "No records";
+
 "mood_sleep" = "Sleep";
 "mood_sleepDuration" = "Duration";
 "mood_sleepQuality" = "Quality";

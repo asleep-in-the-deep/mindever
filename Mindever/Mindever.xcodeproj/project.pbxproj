@@ -55,6 +55,12 @@
 		84AA69C527C19D68004A1978 /* RecordDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69C427C19D68004A1978 /* RecordDatePickerView.swift */; };
 		84AA69C727C1B2D3004A1978 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69C627C1B2D3004A1978 /* Image.swift */; };
 		84AA69C927C1B36A004A1978 /* MoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69C827C1B36A004A1978 /* MoodModel.swift */; };
+		84AA69CB27C51011004A1978 /* MoodManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69CA27C51011004A1978 /* MoodManager.swift */; };
+		84AA69CD27C51B28004A1978 /* QuerySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69CC27C51B28004A1978 /* QuerySnapshot.swift */; };
+		84AA69D027C5225D004A1978 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69CF27C5225C004A1978 /* Encodable.swift */; };
+		84AA69D227C52507004A1978 /* MoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69D127C52507004A1978 /* MoodViewModel.swift */; };
+		84AA69D427C54563004A1978 /* BaseLocalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69D327C54562004A1978 /* BaseLocalize.swift */; };
+		84AA69D627C545C5004A1978 /* NoRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA69D527C545C5004A1978 /* NoRecordsView.swift */; };
 		CD4C283AFECAB36ACC4DE0A6 /* Pods_Mindever.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0503AF125EB1D07B62A9E0 /* Pods_Mindever.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +116,12 @@
 		84AA69C427C19D68004A1978 /* RecordDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDatePickerView.swift; sourceTree = "<group>"; };
 		84AA69C627C1B2D3004A1978 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		84AA69C827C1B36A004A1978 /* MoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodModel.swift; sourceTree = "<group>"; };
+		84AA69CA27C51011004A1978 /* MoodManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodManager.swift; sourceTree = "<group>"; };
+		84AA69CC27C51B28004A1978 /* QuerySnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuerySnapshot.swift; sourceTree = "<group>"; };
+		84AA69CF27C5225C004A1978 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		84AA69D127C52507004A1978 /* MoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewModel.swift; sourceTree = "<group>"; };
+		84AA69D327C54562004A1978 /* BaseLocalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLocalize.swift; sourceTree = "<group>"; };
+		84AA69D527C545C5004A1978 /* NoRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecordsView.swift; sourceTree = "<group>"; };
 		B9798BF29AB05B0D232CDC7D /* Pods-Mindever.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindever.release.xcconfig"; path = "Target Support Files/Pods-Mindever/Pods-Mindever.release.xcconfig"; sourceTree = "<group>"; };
 		D2F5D682356A1A286F746F71 /* Pods-Mindever.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mindever.debug.xcconfig"; path = "Target Support Files/Pods-Mindever/Pods-Mindever.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,6 +240,7 @@
 			children = (
 				84704D9927B306800053F7DE /* Foundation */,
 				8442414E27AF05F800237822 /* SwiftUI */,
+				84AA69CE27C51B2E004A1978 /* Firebase */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -266,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				84704D7B27B2FD2B0053F7DE /* MoodView.swift */,
+				84AA69D127C52507004A1978 /* MoodViewModel.swift */,
 				84AA69C827C1B36A004A1978 /* MoodModel.swift */,
 				84AA69C327C1980C004A1978 /* New Mood */,
 			);
@@ -294,6 +308,7 @@
 				84704D9227B306010053F7DE /* Localizable.strings */,
 				84704D9527B306330053F7DE /* Localize.swift */,
 				84704D9A27B307420053F7DE /* TabLocalize.swift */,
+				84AA69D327C54562004A1978 /* BaseLocalize.swift */,
 				849FB21327B86B9700B981D7 /* NavigationLocalize.swift */,
 				84AA69A427BDA449004A1978 /* MoodLocalize.swift */,
 				84AA69A627BDA82D004A1978 /* ActionLocalize.swift */,
@@ -306,6 +321,7 @@
 			children = (
 				84704D9727B306710053F7DE /* String.swift */,
 				84704E1127B6EDB50053F7DE /* Date.swift */,
+				84AA69CF27C5225C004A1978 /* Encodable.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -342,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				84704DF627B4730E0053F7DE /* BaseManager.swift */,
+				84AA69CA27C51011004A1978 /* MoodManager.swift */,
 				84704DF327B4721B0053F7DE /* ExampleManager.swift */,
 			);
 			path = "Data Managers";
@@ -363,6 +380,7 @@
 				84AA69C127C19224004A1978 /* RecordNavigationView.swift */,
 				849FB21527B8722D00B981D7 /* DayCalendarPicker.swift */,
 				84AA69C427C19D68004A1978 /* RecordDatePickerView.swift */,
+				84AA69D527C545C5004A1978 /* NoRecordsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -382,6 +400,14 @@
 				84AA69BC27BFFD57004A1978 /* NewMoodView.swift */,
 			);
 			path = "New Mood";
+			sourceTree = "<group>";
+		};
+		84AA69CE27C51B2E004A1978 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				84AA69CC27C51B28004A1978 /* QuerySnapshot.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		876F07A862FD531AC7DD588A /* Pods */ = {
@@ -529,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8442415B27B0025800237822 /* LoadingRectangle.swift in Sources */,
+				84AA69D027C5225D004A1978 /* Encodable.swift in Sources */,
 				8474EC2E27B71EB400603AB6 /* WeekDay.swift in Sources */,
 				84704D7E27B2FD470053F7DE /* SettingsView.swift in Sources */,
 				84AA69A527BDA449004A1978 /* MoodLocalize.swift in Sources */,
@@ -542,10 +569,13 @@
 				8442415D27B009A100237822 /* TutorialTimer.swift in Sources */,
 				8442413F27AEFD0E00237822 /* AuthView.swift in Sources */,
 				84AA69C727C1B2D3004A1978 /* Image.swift in Sources */,
+				84AA69CB27C51011004A1978 /* MoodManager.swift in Sources */,
 				84704D9F27B30F1B0053F7DE /* TabItemData.swift in Sources */,
 				8442414D27AF05EE00237822 /* Color.swift in Sources */,
 				84AA69C227C19224004A1978 /* RecordNavigationView.swift in Sources */,
+				84AA69D427C54563004A1978 /* BaseLocalize.swift in Sources */,
 				849FB21627B8722D00B981D7 /* DayCalendarPicker.swift in Sources */,
+				84AA69D627C545C5004A1978 /* NoRecordsView.swift in Sources */,
 				84704DF127B46BA40053F7DE /* Document.swift in Sources */,
 				84704D8227B301AC0053F7DE /* ThoughtsView.swift in Sources */,
 				84704D7C27B2FD2B0053F7DE /* MoodView.swift in Sources */,
@@ -563,7 +593,9 @@
 				84AA69A727BDA82E004A1978 /* ActionLocalize.swift in Sources */,
 				84AA69C927C1B36A004A1978 /* MoodModel.swift in Sources */,
 				84704DF427B4721B0053F7DE /* ExampleManager.swift in Sources */,
+				84AA69D227C52507004A1978 /* MoodViewModel.swift in Sources */,
 				84704DA327B319150053F7DE /* MainViewModel.swift in Sources */,
+				84AA69CD27C51B28004A1978 /* QuerySnapshot.swift in Sources */,
 				849FB21027B8430900B981D7 /* MainNavigationView.swift in Sources */,
 				84704E1227B6EDB50053F7DE /* Date.swift in Sources */,
 				84704E1027B6ECEE0053F7DE /* CalendarManager.swift in Sources */,

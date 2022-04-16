@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
         }
 
-        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor(named: "violet")
+        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = Color.violet.toUIColor()
     }
 
 }

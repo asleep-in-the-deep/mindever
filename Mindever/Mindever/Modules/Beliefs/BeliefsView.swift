@@ -9,6 +9,8 @@ struct BeliefsView: View {
 
     @State var showNewBelief: Bool = false
 
+    @State var recordDates: Set<Date> = []
+
     var body: some View {
         VStack {
             MainNavigationView(title: Localize.Tab.beliefs.text,
@@ -17,7 +19,10 @@ struct BeliefsView: View {
             )
 
             VStack {
-                WeekCalendarView(selectedDay: $selectedDay, pickedDate: $pickedDate)
+                WeekCalendarView(selectedDay: $selectedDay,
+                                 pickedDate: $pickedDate,
+                                 recordDates: $recordDates
+                )
 
                 Spacer()
             }

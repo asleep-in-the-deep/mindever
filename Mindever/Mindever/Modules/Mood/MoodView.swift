@@ -3,7 +3,7 @@ import SwiftUIX
 
 struct MoodView: View {
 
-    @State var selectedDay: WeekDay?
+    @StateObject private var viewModel = MoodViewModel()
 
     @State var isPickingDate: Bool = false
     @State var pickedDate = Date()
@@ -19,13 +19,24 @@ struct MoodView: View {
 
             ScrollView {
                 VStack {
-                    WeekCalendarView(selectedDay: $selectedDay, pickedDate: $pickedDate)
+                    WeekCalendarView(selectedDay: $viewModel.selectedDay,
+                                     pickedDate: $pickedDate,
+                                     recordDates: $viewModel.recordDates
+                    )
 
-                    SleepView()
-                        .padding(.bottom, 20)
+                    if !viewModel.dayMoods.isEmpty {
+                        if let sleep = viewModel.daySleep {
+                            SleepView(sleep: sleep)
+                        }
 
-                    MoodCellView()
-                        .padding(.bottom, 15)
+                        VStack(spacing: 15) {
+                            ForEach(viewModel.dayMoods, id: \.self) { mood in
+                                MoodCellView(mood: mood)
+                            }
+                        }
+                    } else {
+                        NoRecordsView()
+                    }
                 }
                 .padding(.horizontal, 20)
                 .padding(.bottom, 30)
@@ -33,22 +44,37 @@ struct MoodView: View {
         }
         .navigationBarHidden(true)
         .navigationTitle("")
-        .blur(radius: isPickingDate ? 50 : 0)
-        .disabled(isPickingDate)
+        .blur(radius: isPickingDate || viewModel.showActivityIndicator ? 50 : 0)
+        .disabled(isPickingDate || viewModel.showActivityIndicator)
         .overlay {
             if isPickingDate {
                 DayCalendarPicker(isPicking: $isPickingDate, date: $pickedDate)
                     .padding(.horizontal, 20)
             }
         }
+        .overlay {
+            Spacer()
+
+            ActivityIndicator()
+                .animated(viewModel.showActivityIndicator)
+                .style(.large)
+                .hidden(!viewModel.showActivityIndicator)
+
+            Spacer()
+        }
         .navigate(isActive: $showNewMood) {
             NewMoodView()
+        }
+        .onAppear {
+            viewModel.getData()
         }
     }
     
 }
 
 fileprivate struct SleepView: View {
+
+    let sleep: SleepRecord
 
     var body: some View {
         VStack {
@@ -62,12 +88,12 @@ fileprivate struct SleepView: View {
             .padding(.top, 10)
 
             HStack {
-                Text(Localize.Sleep.duration(hours: "0:00").text)
+                Text(Localize.Sleep.duration(hours: sleep.duration).text)
                     .font(.november(weight: .regular(size: 13)))
 
                 Spacer()
 
-                Text(Localize.Sleep.quality(value: 0).text)
+                Text(Localize.Sleep.quality(value: sleep.quality).text)
                     .font(.november(weight: .regular(size: 13)))
             }
             .padding(.horizontal, 15)
@@ -90,12 +116,14 @@ fileprivate struct SleepView: View {
 
 fileprivate struct MoodCellView: View {
 
+    let mood: MoodRecord
+
     var body: some View {
         VStack(spacing: 10) {
             HStack {
                 Spacer()
 
-                Text("15:45")
+                Text(mood.time)
                     .font(.november(weight: .medium(size: 14)))
                     .foregroundColor(.white)
 
@@ -108,10 +136,12 @@ fileprivate struct MoodCellView: View {
 
             HStack(alignment: .center) {
                 VStack {
-                    Image(systemName: "face.smiling")
-                        .font(.system(size: 50))
+                    Mood(rawValue: mood.mood)?.icon
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 50)
 
-                    Text(Localize.Mood.normal.text)
+                    Text(Mood(rawValue: mood.mood)?.name ?? "")
                         .font(.november(weight: .medium(size: 14)))
                 }
 
@@ -123,7 +153,7 @@ fileprivate struct MoodCellView: View {
                             Image(systemName: "eyes")
                                 .font(.system(size: 15, weight: .light))
 
-                            Text(Localize.Emotion.anxiety(value: 0).text)
+                            Text(Localize.Emotion.anxiety(value: mood.anxiety).text)
                                 .font(.november(weight: .regular(size: 13)))
                         }
 
@@ -131,7 +161,7 @@ fileprivate struct MoodCellView: View {
                             Image(systemName: "bolt")
                                 .font(.system(size: 15, weight: .light))
 
-                            Text(Localize.Emotion.energy(value: 0).text)
+                            Text(Localize.Emotion.energy(value: mood.energy).text)
                                 .font(.november(weight: .regular(size: 13)))
                         }
                         .padding(.leading, 5)
@@ -142,7 +172,7 @@ fileprivate struct MoodCellView: View {
                             Image(systemName: "flame")
                                 .font(.system(size: 15, weight: .light))
 
-                            Text(Localize.Emotion.annoyance(value: 0).text)
+                            Text(Localize.Emotion.annoyance(value: mood.annoyance).text)
                                 .font(.november(weight: .regular(size: 13)))
                         }
 
@@ -150,7 +180,7 @@ fileprivate struct MoodCellView: View {
                             Image(systemName: "person.crop.artframe")
                                 .font(.system(size: 15, weight: .light))
 
-                            Text(Localize.Emotion.selfEsteem(value: 0).text)
+                            Text(Localize.Emotion.selfEsteem(value: mood.selfEsteem).text)
                                 .font(.november(weight: .regular(size: 13)))
                         }
                     }

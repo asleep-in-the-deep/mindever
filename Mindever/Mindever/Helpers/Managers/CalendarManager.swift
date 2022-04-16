@@ -11,7 +11,11 @@ final class CalendarManager {
         self.calendar.timeZone = .current
     }
 
-    func getWeek(byAdding value: Int = 0, for date: Date = Date()) -> [WeekDay] {
+    func getWeek(
+        byAdding value: Int = 0,
+        for date: Date = Date(),
+        records: Set<Date>
+    ) -> [WeekDay] {
         let chosenDay = calendar.date(byAdding: .day, value: value, to: date)
         let resultDay = calendar.startOfDay(for: chosenDay ?? Date())
 
@@ -28,7 +32,15 @@ final class CalendarManager {
                     self.dateFormatter.dateFormat = "LLLL yyyy"
                     let monthAndYear = dateFormatter.string(from: day)
 
-                    week.append(WeekDay(dayOfWeek: dayOfWeek, day: dateString, monthAndYear: monthAndYear, date: day, hasRecords: false))
+                    var hasRecords: Bool = false
+                    for record in records {
+                        if self.checkDayIsSameAs(pickedDate: record, date: day) {
+                            hasRecords = true
+                            break
+                        }
+                    }
+
+                    week.append(WeekDay(dayOfWeek: dayOfWeek, day: dateString, monthAndYear: monthAndYear, date: day, hasRecords: hasRecords))
                 }
             }
         }
@@ -51,6 +63,16 @@ final class CalendarManager {
         let date = calendar.date(from: components)
 
         return date ?? Date.now
+    }
+
+    func firebaseStringToDate(with string: String) -> Date {
+        dateFormatter.dateFormat = "dd.MM.yy"
+        return dateFormatter.date(from: string) ?? Date()
+    }
+
+    func dateToFirebaseString(with date: Date) -> String {
+        dateFormatter.dateFormat = "dd.MM.yy"
+        return dateFormatter.string(from: date)
     }
 
 }

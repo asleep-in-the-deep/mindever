@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct MoodRecord: Codable {
+struct MoodRecord: Codable, Hashable {
     let date: String
     let time: String
     let mood: Int

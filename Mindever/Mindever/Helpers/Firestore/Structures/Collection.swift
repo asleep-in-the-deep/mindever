@@ -10,5 +10,8 @@ struct Collection {
     static let help = "help-questions"
     static let situations = "situations"
 
-    
+    // MARK: - Mood
+
+    static let mood = "mood"
+    static let sleep = "sleep"
 }
