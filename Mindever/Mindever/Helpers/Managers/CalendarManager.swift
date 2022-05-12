@@ -11,6 +11,8 @@ final class CalendarManager {
         self.calendar.timeZone = .current
     }
 
+    // MARK: - Week Calendar
+
     func getWeek(
         byAdding value: Int = 0,
         for date: Date = Date(),
@@ -56,6 +58,8 @@ final class CalendarManager {
         return calendar.isDate(pickedDate, inSameDayAs: date)
     }
 
+    // MARK: - Sleep Managing
+
     func getDefaultSleep() -> Date {
         var components = DateComponents()
         components.hour = 8
@@ -65,14 +69,21 @@ final class CalendarManager {
         return date ?? Date.now
     }
 
+    // MARK: - Firebase
+
     func firebaseStringToDate(with string: String) -> Date {
         dateFormatter.dateFormat = "dd.MM.yy"
         return dateFormatter.date(from: string) ?? Date()
     }
 
-    func dateToFirebaseString(with date: Date) -> String {
+    func getDateForFirebase() -> String {
         dateFormatter.dateFormat = "dd.MM.yy"
-        return dateFormatter.string(from: date)
+        return dateFormatter.string(from: Date())
+    }
+
+    func getTimeForFirebase(with time: Date = Date()) -> String {
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: time)
     }
 
 }

@@ -14,5 +14,6 @@ target 'Mindever' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
+  pod 'FirebaseFirestoreSwift'
 
 end

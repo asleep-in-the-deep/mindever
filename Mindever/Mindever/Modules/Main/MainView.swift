@@ -24,6 +24,7 @@ struct MainView: View {
                 TabBarView(viewModel: viewModel)
             }
         }
+        .navigationBarHidden(true)
     }
 }
 

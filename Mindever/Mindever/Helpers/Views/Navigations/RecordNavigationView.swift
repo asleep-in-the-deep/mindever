@@ -56,9 +56,3 @@ struct RecordNavigationView: View {
         }
     }
 }
-
-//struct RecordNavigationView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RecordNavigationView()
-//    }
-//}

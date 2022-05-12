@@ -54,7 +54,10 @@ struct WeekCalendarView: View {
                     .background(setBackground(for: day))
                     .cornerRadius(10)
                     .overlay {
-                        if day != selectedDay {
+                        if CalendarManager.shared.checkIsToday(date: day.date) {
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.violet, lineWidth: 2)
+                        } else if day != selectedDay {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.border, lineWidth: 1)
                         }

@@ -11,7 +11,24 @@
 "navigation_save" = "Сохранить";
 "navigation_newRecord" = "Новая запись";
 
+"base_mindever" = "Mindever";
 "base_norecords" = "Нет записей";
+"base_submit" = "Отправить";
+"base_alert" = "Произошла ошибка. Попробуйте еще раз";
+
+"start_signIn" = "Вход";
+"start_register" = "Еще не зарегистрированы?";
+"start_auth" = "Авторизация";
+"start_login" = "E-mail";
+"start_password" = "Пароль";
+"start_forgotPassword" = "Забыли пароль?";
+
+"forgotPassword_title" = "Восстановить пароль";
+
+"reg_title" = "Регистрация";
+"reg_name" = "Имя";
+"reg_repeatPassword" = "Повторите пароль";
+"reg_apply" = "Зарегистрироваться";
 
 "mood_sleep" = "Сон";
 "mood_sleepDuration" = "Длительность";

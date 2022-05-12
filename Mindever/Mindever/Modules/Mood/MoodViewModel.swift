@@ -81,4 +81,10 @@ class MoodViewModel: ObservableObject {
 
         self.dayMoods = self.dayMoods.sorted(by: { $0.time > $1.time })
     }
+
+    // MARK: - Actions
+
+    func deleteMood(with id: String?) {
+        print(id)
+    }
 }

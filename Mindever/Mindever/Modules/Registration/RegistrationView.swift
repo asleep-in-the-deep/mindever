@@ -1,9 +1,11 @@
 import SwiftUI
-import SwiftUIX
 
-struct AuthView: View {
+struct RegistrationView: View {
 
-    @StateObject private var viewModel = AuthViewModel()
+    @State var name: String = ""
+    @State var login: String = ""
+    @State var password: String = ""
+    @State var repeatPassword: String = ""
 
     var body: some View {
         ZStack {
@@ -13,51 +15,49 @@ struct AuthView: View {
                 }
 
             VStack(spacing: 60) {
-                Text(Localize.Start.auth.text)
+                Text(Localize.Registration.title.text)
                     .font(.november(weight: .bold(size: 25)))
                     .foregroundColor(.black)
                     .padding(.bottom, 30)
 
                 VStack(spacing: 25) {
-                    TextField(Localize.Start.login.text, text: $viewModel.login)
+                    TextField(Localize.Registration.name.text, text: $name)
                         .frame(height: 45)
                         .padding(.horizontal, 10)
                         .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.border, lineWidth: 1)
                         )
 
-                    SecureField(Localize.Start.password.text, text: $viewModel.password)
+                    TextField(Localize.Start.login.text, text: $login)
                         .frame(height: 45)
                         .padding(.horizontal, 10)
                         .overlay(RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.border, lineWidth: 1)
                         )
 
-                    NavigationLink {
-                        ForgotPasswordView()
-                    } label: {
-                        Text(Localize.Start.forgotPassword.text)
-                            .font(.november(weight: .medium(size: 16)))
-                            .foregroundColor(.black)
-                    }
+                    SecureField(Localize.Start.password.text, text: $password)
+                        .frame(height: 45)
+                        .padding(.horizontal, 10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.border, lineWidth: 1)
+                        )
+
+                    SecureField(Localize.Registration.repeatPassword.text, text: $repeatPassword)
+                        .frame(height: 45)
+                        .padding(.horizontal, 10)
+                        .overlay(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.border, lineWidth: 1)
+                        )
                 }
 
-                Button(action: viewModel.signIn) {
-                    ButtonView(title: Localize.Start.signIn.text, color: .violet)
-                        .frame(height: 45)
-                }
+                ButtonView(title: Localize.Registration.apply.text, color: .violet)
+                    .frame(height: 45)
 
                 Spacer()
             }
             .padding(.horizontal, 20)
         }
-        .blur(radius: viewModel.showActivityIndicator ? 50 : 0)
-        .disabled(viewModel.showActivityIndicator)
-        .showLoading(isActive: viewModel.showActivityIndicator)
-        .navigate(to: MainView(), isActive: $viewModel.navigateToMainView)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: NaviigationBarBackButtonView())
     }
 }
-
-

@@ -1,6 +1,9 @@
 import SwiftUI
+import FirebaseFirestoreSwift
 
-struct MoodRecord: Codable, Hashable {
+struct MoodRecord: Codable, Hashable, Identifiable {
+    @DocumentID var id: String?
+    let user: String
     let date: String
     let time: String
     let mood: Int
@@ -8,9 +11,16 @@ struct MoodRecord: Codable, Hashable {
     let selfEsteem: Int
     let anxiety: Int
     let annoyance: Int
+
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case user, date, time, mood, energy, selfEsteem, anxiety, annoyance
+    }
 }
 
-struct SleepRecord: Codable {
+struct SleepRecord: Codable, Identifiable {
+    @DocumentID var id: String?
+    let user: String
     let date: String
     let duration: String
     let quality: Int

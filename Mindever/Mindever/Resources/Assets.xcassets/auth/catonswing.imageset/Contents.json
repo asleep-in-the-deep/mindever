@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "catonswing.svg",
+      "filename" : "catonswing-2.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "catonswing-1.svg",
+      "filename" : "catonswing-3.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "catonswing-2.svg",
+      "filename" : "catonswing-4.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

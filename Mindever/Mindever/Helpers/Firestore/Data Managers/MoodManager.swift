@@ -1,5 +1,6 @@
 import Foundation
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 final class MoodManager: BaseManager {
 
@@ -22,7 +23,7 @@ final class MoodManager: BaseManager {
     class func addSleep(with sleep: SleepRecord, completion: @escaping (Result<Bool, Error>) -> Void) {
         let reference = self.database.collection(Collection.sleep)
         
-        self.addRecord(reference: reference, data: sleep.dictionary) { result in
+        self.addRecord(reference: reference, data: sleep) { result in
             completion(result)
         }
     }
@@ -30,7 +31,7 @@ final class MoodManager: BaseManager {
     class func addMood(with mood: MoodRecord, completion: @escaping (Result<Bool, Error>) -> Void) {
         let reference = self.database.collection(Collection.mood)
 
-        self.addRecord(reference: reference, data: mood.dictionary) { result in
+        self.addRecord(reference: reference, data: mood) { result in
             completion(result)
         }
     }

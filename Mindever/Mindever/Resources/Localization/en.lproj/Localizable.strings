@@ -11,7 +11,24 @@
 "navigation_save" = "Save";
 "navigation_newRecord" = "New record";
 
+"base_mindever" = "Mindever";
 "base_norecords" = "No records";
+"base_submit" = "Submit";
+"base_alert" = "An error has occurred. Try again";
+
+"start_signIn" = "Sign in";
+"start_register" = "Don't have an account yet?";
+"start_auth" = "Authorization";
+"start_login" = "E-mail";
+"start_password" = "Password";
+"start_forgotPassword" = "Forgot password?";
+
+"forgotPassword_title" = "Reset password";
+
+"reg_title" = "Registration";
+"reg_name" = "Name";
+"reg_repeatPassword" = "Repeat password";
+"reg_apply" = "Register";
 
 "mood_sleep" = "Sleep";
 "mood_sleepDuration" = "Duration";

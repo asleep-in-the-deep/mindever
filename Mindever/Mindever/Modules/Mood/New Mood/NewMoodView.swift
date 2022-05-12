@@ -1,62 +1,71 @@
 import SwiftUI
+import SwiftUIX
 
 struct NewMoodView: View {
 
     @Environment(\.dismiss) private var dismiss
 
-    @State private var mood: Int = 3
-    @State private var energy: Int = 3
-    @State private var selfEsteem: Int = 3
-    @State private var anxiety: Int = 0
-    @State private var annoyance: Int = 0
+    @StateObject private var viewModel = NewMoodViewModel()
 
-    @State private var sleepTime: Date = CalendarManager.shared.getDefaultSleep()
-    @State private var sleepQuality = 3
+    var noSleepRecord: Bool
     
     var body: some View {
         VStack {
             RecordNavigationView {
                 dismiss()
             } saveAction: {
-                dismiss()
+                viewModel.saveMood(withSleep: noSleepRecord)
             }
 
             ScrollView {
                 VStack(spacing: 30) {
-                    MoodRecordView(score: $mood)
+                    MoodRecordView(score: $viewModel.mood)
 
                     MoodParameterView(title: Localize.MoodRecord.energy.text,
                                       range: 1...5,
-                                      score: $energy,
+                                      score: $viewModel.energy,
                                       needDivider: true
                     )
 
                     MoodParameterView(title: Localize.MoodRecord.selfEsteem.text,
                                       range: 1...5,
-                                      score: $selfEsteem,
+                                      score: $viewModel.selfEsteem,
                                       needDivider: true
                     )
 
                     MoodParameterView(title: Localize.MoodRecord.anxiety.text,
                                       range: 0...3,
-                                      score: $anxiety,
+                                      score: $viewModel.anxiety,
                                       needDivider: true
                     )
 
                     MoodParameterView(title: Localize.MoodRecord.annoyance.text,
                                       range: 0...3,
-                                      score: $annoyance,
+                                      score: $viewModel.annoyance,
                                       needDivider: true
                     )
 
-                    SleepRecordView(sleepTime: $sleepTime,
-                                    sleepQuality: $sleepQuality
-                    )
+                    if noSleepRecord {
+                        SleepRecordView(sleepTime: $viewModel.sleepTime,
+                                        sleepQuality: $viewModel.sleepQuality
+                        )
+                    }
                 }
                 .padding(.vertical, 30)
                 .padding(.horizontal, 20)
             }
         }
+        .blur(radius: viewModel.showActivityIndicator ? 50 : 0)
+        .disabled(viewModel.showActivityIndicator)
+        .showLoading(isActive: viewModel.showActivityIndicator)
+        .alert(isPresented: $viewModel.showAlert, content: {
+            Alert(title: Localize.Base.alert.text)
+        })
+        .onChange(of: viewModel.hideView, perform: { hide in
+            if hide {
+                dismiss()
+            }
+        })
         .navigationBarHidden(true)
     }
 }

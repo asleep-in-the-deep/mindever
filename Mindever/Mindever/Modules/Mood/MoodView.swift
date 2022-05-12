@@ -31,7 +31,7 @@ struct MoodView: View {
 
                         VStack(spacing: 15) {
                             ForEach(viewModel.dayMoods, id: \.self) { mood in
-                                MoodCellView(mood: mood)
+                                MoodCellView(viewModel: viewModel, mood: mood)
                             }
                         }
                     } else {
@@ -46,24 +46,15 @@ struct MoodView: View {
         .navigationTitle("")
         .blur(radius: isPickingDate || viewModel.showActivityIndicator ? 50 : 0)
         .disabled(isPickingDate || viewModel.showActivityIndicator)
+        .showLoading(isActive: viewModel.showActivityIndicator)
         .overlay {
             if isPickingDate {
                 DayCalendarPicker(isPicking: $isPickingDate, date: $pickedDate)
                     .padding(.horizontal, 20)
             }
         }
-        .overlay {
-            Spacer()
-
-            ActivityIndicator()
-                .animated(viewModel.showActivityIndicator)
-                .style(.large)
-                .hidden(!viewModel.showActivityIndicator)
-
-            Spacer()
-        }
         .navigate(isActive: $showNewMood) {
-            NewMoodView()
+            NewMoodView(noSleepRecord: viewModel.daySleep == nil)
         }
         .onAppear {
             viewModel.getData()
@@ -115,6 +106,8 @@ fileprivate struct SleepView: View {
 }
 
 fileprivate struct MoodCellView: View {
+
+    @ObservedObject var viewModel: MoodViewModel
 
     let mood: MoodRecord
 
@@ -203,7 +196,7 @@ fileprivate struct MoodCellView: View {
             }
 
             Button {
-
+                viewModel.deleteMood(with: mood.id)
             } label: {
                 Label(Localize.Action.delete.text, systemImage: "trash")
                     .foregroundColor(.red)
