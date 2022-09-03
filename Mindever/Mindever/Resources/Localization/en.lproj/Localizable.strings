@@ -61,3 +61,18 @@
 "action_saveTitle" = "Are you done with this record?";
 "action_save" = "Yes, save and exit";
 "action_cancel" = "Cancel";
+
+"cbt_situation_title" = "Situation";
+"cbt_situation_placeholder" = "Describe what happened...";
+
+"cbt_distortions_title" = "Cognitive distortions";
+"cbt_distortions_allornothing" = " 🌗 \"All or nothing\"";
+"cbt_distortions_overgeneralization" = " 👯 Overgeneralization";
+"cbt_distortions_negativefilter" = " 👓 Negative filter";
+"cbt_distortions_positiveminimization" = " 🙈 Depreciation positive";
+"cbt_distortions_quicklyconclusions" = " 🔮 Quickly conclusions";
+"cbt_distortions_exaggerationorunderstatement" = " 🔎 Exaggeration or understatement";
+"cbt_distortions_emotionalrationale" = "🪤 Emotional justification";
+"cbt_distortions_must" = " 👉 Necessity";
+"cbt_distortions_label" = " 🏷 Labeling";
+"cbt_distortions_personalization" = " 👤 Personalization";

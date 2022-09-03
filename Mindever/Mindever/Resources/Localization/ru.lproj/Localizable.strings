@@ -61,3 +61,18 @@
 "action_saveTitle" = "Вы закончили с этой записью?";
 "action_save" = "Да, сохранить и выйти";
 "action_cancel" = "Отменить";
+
+"cbt_situation_title" = "Ситуация";
+"cbt_situation_placeholder" = "Опишите, что произошло...";
+
+"cbt_distortions_title" = "Когнитивные искажения";
+"cbt_distortions_allornothing" = "🌗 \"Все или ничего\"";
+"cbt_distortions_overgeneralization" = "👯‍♀️ Сверхобобщение";
+"cbt_distortions_negativefilter" = "👓 Негативный фильтр";
+"cbt_distortions_positiveminimization" = "🙈 Обесценивание положительного";
+"cbt_distortions_quicklyconclusions" = "🔮 Поспешные выводы";
+"cbt_distortions_exaggerationorunderstatement" = "🔎 Преувеличение или преуменьшение";
+"cbt_distortions_emotionalrationale" = "🪤 Эмоциональное обоснование";
+"cbt_distortions_must" = "👉 Долженствование";
+"cbt_distortions_label" = "🏷 Навешивание ярлыков";
+"cbt_distortions_personalization" = "👤 Персонализация";

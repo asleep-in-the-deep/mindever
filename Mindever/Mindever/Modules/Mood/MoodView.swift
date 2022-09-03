@@ -195,11 +195,10 @@ fileprivate struct MoodCellView: View {
                 Label(Localize.Action.edit.text, systemImage: "square.and.pencil")
             }
 
-            Button {
+            Button(role: .destructive) {
                 viewModel.deleteMood(with: mood.id)
             } label: {
                 Label(Localize.Action.delete.text, systemImage: "trash")
-                    .foregroundColor(.red)
             }
         }
     }
